@@ -1,0 +1,43 @@
+* { box-sizing: border-box}
+
+//colors
+$color-dark-green: #124022;
+$color-light-green: #B4C339;
+
+//fonts 
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+$font-title: 'Poppins', sans-serif;
+
+//media querry sizes
+$media-tablet:  700px;
+$media-computer-small: 1000px;
+$media-computer-large: 2000px;
+
+
+//overall layout width
+.container {
+    width: 77vw;
+    margin: 0 auto;
+    height: 100%;
+}
+
+//background
+body {
+    background-image: url('../images/main\ bg\ image@2x.png');
+    background-repeat: no-repeat;
+    background-size: 350%;
+}
+
+
+//media query
+@media(min-width: $media-tablet) {
+    body {
+        background-size: 200%;
+    }
+}
+
+@media(min-width: $media-computer-small) {
+    body {
+        background-size: 100%;
+    }
+}
