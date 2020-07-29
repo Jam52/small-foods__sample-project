@@ -12,12 +12,10 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 .nav__elements {
-    width: 100%;
-    height: 100%;
+
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -25,11 +23,14 @@ nav {
 }
 
 .nav__logo {
-    height: 8vmin;
-    max-height: 100px;
+    height: 4vmax;
+    min-height: 25px;
+    // max-height: 100px;
+    margin: 5vmin 0;
 }
 
 .nav__dropdown__icon {
+    margin: 2vmin 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -102,7 +103,6 @@ nav {
     }
 
     .elements__container {
-        height: 13vmin;
         display: flex;
         flex-direction: column-reverse;
         justify-content: flex-start;
@@ -120,19 +120,20 @@ nav {
 
         a {
             display: inline-block;
-            padding: 0 0 1em 0;
+            padding: 0 0 0.8em 0;
+            margin-bottom: 1em;
             margin-top: 0.2em;
             // transition-duration: 0.2s;
 
             &:hover {
                 border-bottom: 0.2em solid $color-light-green;
-                padding-bottom: 0.8em;
+                padding-bottom: 0.5em;
             }
     
             &:focus {
-                
-                border-bottom: 1em solid $color-light-green;
-                padding-bottom: 0em;
+                // padding-bottom: 0;
+                border-bottom: 1.2em solid $color-light-green;
+                margin-bottom: 0em;
             }
 
             
@@ -148,7 +149,7 @@ nav {
         font-size: 0.7rem;
 
         a {
-            margin-top: 1em;
+            margin-top: 3em;
         }
         a + a {
             margin-left: 3vw;

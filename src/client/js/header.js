@@ -1,3 +1,5 @@
+
+//event listener for dropdown in nav
 const dropDownIcon = document.querySelector('.nav__dropdown__icon');
 const dropDownElements = document.querySelector('.nav__links');
 dropDownIcon.addEventListener('click', (event) => {
@@ -6,3 +8,5 @@ dropDownIcon.addEventListener('click', (event) => {
     console.log(dropDownElements)
     dropDownElements.classList.toggle('show');
 })
+
+
