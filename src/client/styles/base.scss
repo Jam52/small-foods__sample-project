@@ -1,12 +1,15 @@
 * { box-sizing: border-box}
 
 //colors
-$color-dark-green: #124022;
+$color-dark-green: rgba(18, 64, 34, 1);
+$color-dark-green-transparent: rgba(18, 64, 34,0.6);
 $color-light-green: #B4C339;
 
 //fonts 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 $font-title: 'Poppins', sans-serif;
+$font-paragraph: 'Raleway', sans-serif;
 
 //media querry sizes
 $media-tablet:  700px;
@@ -17,9 +20,29 @@ $media-computer-large: 2000px;
 //overall layout width
 .container {
     width: 77vw;
+    max-width: 1200px;
     margin: 0 auto;
     height: 100%;
 }
+
+.divider-right {
+    border-top: 4px solid $color-light-green;
+    margin-left: 11.5vw;
+}
+
+.divider-left {
+    border-top: 4px solid $color-light-green;
+    margin-right: 11.5vw;
+}
+
+.divider--left {
+    hr {
+        position: relative;
+        right:5.75%;
+        width: 88.5vw;
+    }
+}
+
 
 //background
 body {
@@ -41,3 +64,4 @@ body {
         background-size: 100%;
     }
 }
+
