@@ -18,6 +18,7 @@
 
 .section__header--small {
     font-size: 1.25rem;
+    padding: 2rem 0;
 }
 
 .section__para {
@@ -25,9 +26,14 @@
     color: #fff;
     font-family: $font-paragraph;
     font-size: 0.873rem;
-    padding: 2em 0;
+    padding: 0 0 2em 0;
     line-height: 1.5em;
-    max-width: 40ch;
+    max-width: 60ch;
+
+    &--list {
+        padding: 1em 0;
+        padding-right: 3em;
+    }
 }
 
 .section__para--large {
@@ -46,8 +52,9 @@
     flex-direction: column;
     justify-content: space-between;
 
+
     .section__text {
-        max-width: 60ch;
+        max-width: 70ch;
         margin: $margin-equal;
     }
 }
