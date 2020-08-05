@@ -67,9 +67,10 @@ $margin-main: 11.5vw;
 
 //background
 body {
-    background-image: url('../images/main\ bg\ image@2x.png');
-    background-repeat: repeat;
-    background-size: 350%;
+    background-image: url('../images/main\ bg\ image@2x.png'), url('../images/bg\ 5@2x.png'), ;
+    background-position: top left, bottom right;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 350%, 400%;
 }
 
 
