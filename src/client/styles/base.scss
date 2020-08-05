@@ -13,8 +13,12 @@ $font-paragraph: 'Raleway', sans-serif;
 
 //media querry sizes
 $media-tablet:  700px;
-$media-computer-small: 1000px;
+$media-computer-small: 1100px;
 $media-computer-large: 2000px;
+
+//margin-padding constants
+$margin-equal: 0 11.5vw;
+$margin-main: 11.5vw;
 
 
 //overall layout width
@@ -25,23 +29,41 @@ $media-computer-large: 2000px;
     height: 100%;
 }
 
-.divider-right {
-    border-top: 4px solid $color-light-green;
-    margin-left: 11.5vw;
-}
+.divider-top {
+    border-top: 4px solid  $color-light-green;
+    
+    &--left {
+        margin-left: $margin-main;
+    }
 
-.divider-left {
-    border-top: 4px solid $color-light-green;
-    margin-right: 11.5vw;
-}
+    &--right {
+        margin-right: $margin-main;
+    }
 
-.divider--left {
-    hr {
-        position: relative;
-        right:5.75%;
-        width: 88.5vw;
+    &--section {
+        margin-right: 3em;
+        
     }
 }
+
+.divider-bottom {
+    border-bottom: 4px solid  $color-light-green;
+    
+    &--left {
+        margin-left: $margin-main;
+    }
+
+    &--right {
+        margin-right: $margin-main;
+    }
+
+    &--section {
+        margin-left: $margin-main;
+        margin-bottom: 3em;
+        
+    }
+}
+
 
 
 //background
