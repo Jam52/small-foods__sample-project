@@ -11,12 +11,10 @@
    margin: 3rem $margin-main 3rem 0;
    display: flex;
    flex-direction: column;
-
-
+   justify-content: space-between;
 
    &__text {
       background-color: $color-dark-green;
-      
    }
 
    &__header {
@@ -53,23 +51,37 @@
    & > * {
       padding-left: $margin-main
    }
-      
+}
+
+.section-divider-img {
+   height: 35vmin;
+   z-index: 9;
+   display: flex;
+   justify-content: flex-end;
+
+   &__img {
+      margin-right: $margin-main;
+      height: 55vmin;
+      width: 55vmin;
+      z-index: 9;
+   }
 }
 
 
 
 @media (min-width: $media-tablet) {
-   #section-3 {
+   #section-3, #section-4 {
       .section-main__text {
          display: flex;
          flex-direction: column;
          justify-content: space-between;
       }
    }
+   
 
    .section-main {
       flex-direction: row;
-      margin: 3rem 0 0 0;
+      margin: 3rem $margin-main 0 0;
 
       &__text {
          width: 60%;
@@ -95,7 +107,7 @@
 
       &__aside {
          margin-top: 10vmin;
-         max-width: 35%;
+         max-width: 40%;
          height: 80%;
          & > * {
             padding-left: 2em;
