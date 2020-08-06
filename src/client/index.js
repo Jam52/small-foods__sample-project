@@ -4,7 +4,8 @@ import './styles/base.scss';
 import './styles/nav.scss';
 import './styles/section-1.scss';
 import './styles/header.scss';
-import './styles/sections-main.scss'
+import './styles/sections-main.scss';
+import './styles/section-download.scss';
 
 
 //import js
