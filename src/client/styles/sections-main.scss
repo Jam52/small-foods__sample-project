@@ -1,5 +1,4 @@
 @import 'base';
-@import 'section-1';
 
 .section {
    margin-top: 3rem;
@@ -44,6 +43,10 @@
    background-color: $color-dark-green;
    align-self: flex-end;
 
+   .divider-bottom--section {
+      margin-left:0;
+   }
+
    .section__title {
       padding-bottom: 0;
    }
@@ -53,20 +56,7 @@
    }
 }
 
-.section-divider-img {
-   height: 35vmin;
-   margin-top: 5vmin;
-   z-index: 9;
-   display: flex;
-   justify-content: flex-end;
 
-   &__img {
-      margin-right: $margin-main;
-      height: 60vmin;
-      width: 60vmin;
-      z-index: 9;
-   }
-}
 
 .section-main-icons {
    background-color: $color-dark-green;
@@ -177,14 +167,8 @@
    }
 }
 
-@media (min-width: $media-computer-small) {
 
-   .section-divider-img {
-   
-      &__img {
-         transform: translateX(-10vmin);
-      }
-   }
+@media (min-width: $media-computer-small) {
 
    .section-main {
 

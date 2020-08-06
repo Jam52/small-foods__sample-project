@@ -1,0 +1,149 @@
+@import 'base';
+
+
+
+
+
+.section-landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 0;
+
+    &__text {
+        max-width: 100ch;
+    }
+
+    &__title {
+        padding-bottom: 0;
+    }
+}
+
+.section-landing-aside {
+    background-color: $color-light-green;
+    margin-right: $margin-main;
+
+    &__container {
+        width: 88.5vw;
+        height: 100%;
+        padding: 1.3em 1.3em 1.3em $margin-main;
+        background-color: $color-light-green;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "title img"
+        "title img"
+        "button img";
+    }
+
+    &__title {
+        grid-area: title;
+        padding: 1em 0 0 0;
+        color: $color-dark-green;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    &__para {
+        grid-area: para;
+        color: $color-dark-green;
+        display: none;
+        margin: 0.5em 0;
+    }
+
+    &__img {
+        grid-area: img;
+        // margin-left: 1em;
+        justify-self: end;
+    }
+
+    &__button {
+        grid-area: button;
+    }
+}
+
+
+   
+
+@media(min-width: $media-tablet) {
+    .section-landing {
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__text {
+            margin-right: 1em;
+        }
+    }
+
+    .section-landing-aside {
+
+        &__container {
+            margin-right: $margin-main;
+            max-width: 25vw;
+            padding-left: 1.3em;
+            grid-template-areas: 
+            "title title"
+            "img img"
+            "button button";
+            column-gap: 0.5em;
+            row-gap: 0.5em;
+            justify-content: center;
+        }
+
+        &__title {
+            padding: 0;
+            text-align: center;
+        }
+
+
+        &__button {
+            height: 2rem;
+            align-self: center;
+        }
+
+        &__img {
+            max-width: 100%;
+             justify-self: center;
+            margin: 0;
+        }
+    }
+}
+
+@media (min-width: $media-computer-small){
+
+    .section-landing {
+        &__text {
+            margin-right: 3em;
+        }
+    }
+    
+
+    .section-landing-aside {
+
+        &__container{
+            padding: 4em 1.3em 4em 1.3em;
+            grid-template-areas: 
+            "title img"
+            "para img"
+            "button img";
+            column-gap: 1em;
+        }
+
+        &__para {
+            display: block;
+            padding: 0;
+        }
+
+        &__title {
+            text-align: start;
+        }
+        
+
+        &__img {
+            align-self: center;
+            width: 100%;
+        }
+    }
+}
+

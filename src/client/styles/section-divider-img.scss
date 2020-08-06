@@ -1,0 +1,27 @@
+@import 'base';
+
+.section-divider-img {
+    height: 18vmax;
+    margin-top: 2.5vmax;
+    z-index: 9;
+    display: flex;
+    justify-content: flex-end;
+ 
+    &__img {
+       margin-right: $margin-main;
+       height: 30vmax;
+       width: 30vmax;
+       z-index: 9;
+    }
+ }
+
+
+ @media (min-width: $media-computer-small) {
+
+    .section-divider-img {
+    
+       &__img {
+          transform: translateX(-10vmin);
+       }
+    }
+}
