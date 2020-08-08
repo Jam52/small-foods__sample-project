@@ -1,18 +1,22 @@
 @import 'base';
 
-.section__title {
+.title {
     margin: 0 1em 0 0;
     font-family: $font-title;
     color: #fff;
     font-weight: bold;
     padding: 3rem 2rem 2rem $margin-main;
+
+    &--dark {
+        color: $color-dark-green;
+    }
 }
 
-.section__title--large {
+.title--large {
     font-size: 1.825rem;
 }
 
-.section__title--med {
+.title--med {
     font-size: 1.5625rem;
 
     &--dark {
@@ -20,18 +24,18 @@
     }
 }
 
-.section__title--small {
+.title--small {
     font-size: 1.25rem;
 }
 
-.section__para {
+.paragraph {
     grid-area: para;
     color: #fff;
     font-family: $font-paragraph;
     font-size: 0.873rem;
     padding: 2em 0 2em 0;
     line-height: 1.5em;
-    max-width: 60ch;
+    max-width: 80ch;
     padding: 2em 1em 2em $margin-main;
 
     &--dark {
@@ -44,13 +48,13 @@
     }
 }
 
-.section__para--large {
+.paragraph--large {
     font-size: 1rem;
 }
 
 
 @media (min-width: $media-computer-small){
-    .section__title--large {
+    .title--large {
         font-size: 2.5rem;
     }
 }

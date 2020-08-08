@@ -1,0 +1,65 @@
+@import 'base';
+
+.section-community {
+    background-color: $color-light-green;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3rem;
+
+}
+
+.form-subscribe {
+    padding-left: $margin-main;
+    padding-right: $margin-main;
+
+    .form {
+        display: flex;
+        flex-direction: column;
+
+        &__check {
+            display: flex;
+            padding-top: 1em;
+            
+        }
+
+        &__checkbox {
+            display: block;
+            position: relative;
+            margin: 0;
+            height: 30px;
+            width: 60px;
+            background-color: #fff;
+        }
+
+        &__para {
+            display: block;
+        }
+
+        &__para, &__title {
+            padding-left: 1em;
+            padding-top: 0;
+        }
+    }
+}
+
+@media (min-width: $media-tablet) {
+    .section-community {
+        flex-direction: row;
+
+
+        .form-subscribe {
+
+            display: flex;
+            align-items: flex-end;
+
+
+            .form {
+                &__title {
+                    padding-top: 3rem;
+                    padding-left: 0;
+                }
+            }
+        }
+        
+    }
+}

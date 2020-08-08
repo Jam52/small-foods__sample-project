@@ -25,7 +25,6 @@
 
     &__container {
         width: 88.5vw;
-        height: 100%;
         padding: 1.3em 1.3em 1.3em $margin-main;
         background-color: $color-light-green;
         display: grid;
@@ -77,11 +76,14 @@
     }
 
     .section-landing-aside {
+        max-width: 25vw;
+        display: flex;
+        // justify-content: center;
+        align-items: center;
 
         &__container {
-            margin-right: $margin-main;
-            max-width: 25vw;
             padding-left: 1.3em;
+            grid-template-rows: 0.4fr 1fr 0.4fr;
             grid-template-areas: 
             "title title"
             "img img"
@@ -89,6 +91,7 @@
             column-gap: 0.5em;
             row-gap: 0.5em;
             justify-content: center;
+            align-items: center;
         }
 
         &__title {

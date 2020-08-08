@@ -1,0 +1,65 @@
+@import 'base';
+
+.section-articles {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: #fff;
+
+    &__divider {
+        margin-right: 60vw;
+    }
+
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-left: $margin-main;
+    }
+}
+
+.article {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-light-grey;
+
+    &__title {
+        padding: 1rem 1rem;
+        margin: 0;
+    }
+
+    &__para {
+        padding: 1rem 1rem;
+    }
+
+    &__img {
+        width: 90%;
+    }
+
+    &__button {
+        margin: 0 1rem 1rem 1rem;
+    }
+
+}
+
+@media (min-width: $media-tablet) {
+
+    .section-articles {
+    
+        &__container {
+            flex-direction: row;
+            margin: 3rem $margin-main 0 $margin-main;
+
+            
+        }
+        
+    }
+
+
+
+    .article + .article {
+        margin-left: 2rem;
+    }
+
+}
