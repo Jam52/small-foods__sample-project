@@ -24,6 +24,10 @@
     flex-direction: column;
     background-color: $color-light-grey;
 
+    .divider-bottom--right {
+        margin-right: 1rem;
+    }
+
     &__title {
         padding: 1rem 1rem;
         margin: 0;
@@ -50,13 +54,8 @@
         &__container {
             flex-direction: row;
             margin: 3rem $margin-main 0 $margin-main;
-
-            
         }
-        
     }
-
-
 
     .article + .article {
         margin-left: 2rem;

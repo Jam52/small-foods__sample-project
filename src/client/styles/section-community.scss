@@ -45,10 +45,11 @@
 @media (min-width: $media-tablet) {
     .section-community {
         flex-direction: row;
+        min-height: 50vh;
 
 
         .form-subscribe {
-
+            max-width: 700px;
             display: flex;
             align-items: flex-end;
 
