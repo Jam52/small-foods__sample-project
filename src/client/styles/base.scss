@@ -23,24 +23,23 @@ $margin-main: 11.5vw;
 
 
 //background
-body {
-    background-image: url('../images/main\ bg\ image@2x.png'), url('../images/bg\ 5@2x.png'), ;
-    // background-position: top left, bottom right;
-    background-repeat: no-repeat, no-repeat;
-    background-size: 350%, 400%;
+.background-img-1 {
+    background-image: url('../images//main\ bg\ image.png');
+    background-size: cover;
+    padding: 4rem 0;
+    
 }
 
-
-//media query
-@media(min-width: $media-tablet) {
-    body {
-        background-size: 200%;
-    }
+.background-img-2 {
+    background-image: url('../images/bg\ 5.png');
+    background-size: cover;
+    padding: 0;
 }
 
-@media(min-width: $media-computer-small) {
-    body {
-        background-size: 100%;
-    }
+.background-img-3 {
+    background-image: url('../images/bg\ 4.png');
+    background-size: cover;
+    padding: 4rem 0;
 }
+
 
