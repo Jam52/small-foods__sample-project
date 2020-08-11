@@ -1,7 +1,6 @@
 
 // Express to run server and routes
 const express = require('express');
-const port = 8000;
 
 // Start up an instance of app
 const app = express();
@@ -21,10 +20,11 @@ app.use(cor());
 // Initialize the main project folder
 app.use(express.static('./dist'));
 
-// Spin up the server
-const server = app.listen(port, listening());
 
 // Callback to debug
 function listening () {
     console.log(`server running on: ${port}`)
 }
+
+// export app for start.js
+module.exports = app;
