@@ -22,58 +22,10 @@ $margin-equal: 0 11.5vw;
 $margin-main: 11.5vw;
 
 
-//overall layout width
-.container {
-    width: 77vw;
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 100%;
-}
-
-.divider-top {
-    border-top: 4px solid  $color-light-green;
-    
-    &--left {
-        margin-left: $margin-main;
-    }
-
-    &--right {
-        margin-right: $margin-main;
-    }
-
-    &--section {
-        margin-right: 3em;
-    }
-
-    &--white {
-        border-top: 4px solid  #fff;
-    }
-}
-
-.divider-bottom {
-    border-bottom: 4px solid  $color-light-green;
-    
-    &--left {
-        margin-left: $margin-main;
-    }
-
-    &--right {
-        margin-right: $margin-main;
-    }
-
-    &--section {
-        margin-left: $margin-main;
-        margin-bottom: 3em;
-        
-    }
-}
-
-
-
 //background
 body {
     background-image: url('../images/main\ bg\ image@2x.png'), url('../images/bg\ 5@2x.png'), ;
-    background-position: top left, bottom right;
+    // background-position: top left, bottom right;
     background-repeat: no-repeat, no-repeat;
     background-size: 350%, 400%;
 }

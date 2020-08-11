@@ -48,9 +48,10 @@
             font-weight: bold;
             padding-bottom: 0.7em;
 
-            &:hover {
+            &:hover, &:focus {
                 border-bottom: 0.2em solid $color-light-green;
                 padding-bottom: 0.5em;
+                outline: none;
             }
         }
 

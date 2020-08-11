@@ -1,5 +1,9 @@
 @import 'base';
 
+.section {
+    margin-top: 3rem;
+ }
+
 .title {
     margin: 0 1em 0 0;
     font-family: $font-title;
@@ -56,5 +60,83 @@
 @media (min-width: $media-computer-small){
     .title--large {
         font-size: 2.5rem;
+    }
+}
+
+.button {
+    padding: 1em;
+    background-color: $color-light-green;
+    color: $color-dark-green;
+    font-weight: bold;
+    border: none;
+    transition-property: background-color, color;
+    transition-duration: 0.3s;
+
+    &:hover, &:focus {
+        background-color: transparent;
+        border: 0.2em solid $color-light-green;
+        padding: 0.8em;
+        color: $color-light-green;
+    }
+
+    &--dark {
+        color: #fff;
+        background-color: $color-dark-green;
+
+        &:hover, &:focus {
+            background-color:transparent;
+            border: 0.2em solid $color-dark-green;
+            color: $color-dark-green;
+            padding: 0.8em;
+        }
+    }
+
+    &--grey {
+        &:hover, &:focus {
+            background-color:transparent;
+            border: 0.2em solid $color-dark-green;
+            padding: 0.8em;
+            color: $color-dark-green;
+        }
+    }
+}
+
+
+
+.divider-top {
+    border-top: 4px solid  $color-light-green;
+    
+    &--left {
+        margin-left: $margin-main;
+    }
+
+    &--right {
+        margin-right: $margin-main;
+    }
+
+    &--section {
+        margin-right: 3em;
+    }
+
+    &--white {
+        border-top: 4px solid  #fff;
+    }
+}
+
+.divider-bottom {
+    border-bottom: 4px solid  $color-light-green;
+    
+    &--left {
+        margin-left: $margin-main;
+    }
+
+    &--right {
+        margin-right: $margin-main;
+    }
+
+    &--section {
+        margin-left: $margin-main;
+        margin-bottom: 3em;
+        
     }
 }
