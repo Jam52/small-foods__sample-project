@@ -3,6 +3,8 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+var ImageminPlugin = require('imagemin-webpack-plugin').default;
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: 'production',
@@ -24,11 +26,11 @@ module.exports = {
                 use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
-                test: /\.(png|jp(e*)g|svg)$/i,  
+                test: /\.(png|jp(e*)g|svg)$/,  
                 use: [{
                     loader: 'url-loader',
                     options: { 
-                        limit: 8000, // Convert images < 8kb to base64 strings
+                        limit: 8000,
                         name: 'images/[hash]-[name].[ext]'
                     } 
                 }]
@@ -37,21 +39,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/client/views/index.html',
-            meta: {viewport: 'content="width=device-width, initial-scale=1'}
-        }),
-        new CleanWebpackPlugin({
-            // Simulate the removal of files
-            dry: true,
-            // Write Logs to Console
-            verbose: true,
-            // Automatically remove all unused webpack assets on rebuild
-            cleanStaleWebpackAssets: true,
-            protectWebpackAssets: false
-        }),
-    ],
-    plugins: [
-        new HtmlWebpackPlugin({
+            minify: false,
             filename: 'index.html',
             template: './src/client/views/index.html'
         }),
@@ -64,7 +52,17 @@ module.exports = {
             cleanStaleWebpackAssets: true,
             protectWebpackAssets: false
         }),
-        new MiniCssExtractPlugin ({filename:'[name].styles.css'})
+        new MiniCssExtractPlugin ({filename:'[name].styles.css'}),
+        // new CopyWebpackPlugin([{
+        //     from: './src/client/images/bg 5.png',
+        //     to: path.resolve(__dirname, 'dist')
+        // }]),
+        // new ImageminPlugin({
+        //     disable: false,
+        //     pngquant: {
+        //       quality: [0.3, 0.5]
+        //     },
+        //   })
     ],
     output: {
         filename: '[name].bundle.js',
