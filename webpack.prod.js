@@ -35,11 +35,19 @@ module.exports = {
                     {
                         loader: "url-loader",
                         options: {
-                            limit: 8000,
+                            limit: 10 * 1024,
                             name: "images/[hash]-[name].[ext]",
                         },
                     },
                 ],
+            },
+            {
+                test: /\.(jpg|png|gif|svg)$/,
+                loader: "image-webpack-loader",
+                // Specify enforce: 'pre' to apply the loader
+                // before url-loader/svg-url-loader
+                // and not duplicate it in rules with them
+                enforce: "pre",
             },
         ],
     },
