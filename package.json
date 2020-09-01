@@ -42,7 +42,9 @@
     "webpack": "^4.44.0"
   },
   "devDependencies": {
+    "import-glob-loader": "^1.1.0",
     "lodash": "^4.17.19",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
     "resolve-url-loader": "^3.1.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"

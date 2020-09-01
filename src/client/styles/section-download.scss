@@ -1,4 +1,4 @@
-@import 'base';
+@import "base";
 
 .section-download {
     background-color: $color-light-green;
@@ -46,7 +46,6 @@
 
 @media (min-width: $media-computer-small) {
     .section-download {
-
         &__text {
             max-width: 100ch;
         }

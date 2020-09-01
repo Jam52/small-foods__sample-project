@@ -1,4 +1,4 @@
-@import 'base';
+@import "base";
 
 .section-footer {
     background-color: $color-light-grey;
@@ -7,7 +7,7 @@
     flex-direction: column;
 
     .social-icons {
-        margin-top : 2rem;
+        margin-top: 2rem;
         display: flex;
 
         &__icon {
@@ -18,9 +18,9 @@
                 border-bottom: 0.2em solid $color-light-green;
                 padding-bottom: 0.5em;
             }
-         }
+        }
     }
-    
+
     &__text {
         padding-right: $margin-main;
     }
@@ -48,7 +48,8 @@
             font-weight: bold;
             padding-bottom: 0.7em;
 
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
                 border-bottom: 0.2em solid $color-light-green;
                 padding-bottom: 0.5em;
                 outline: none;
@@ -60,7 +61,6 @@
         }
 
         &--sublink {
-            
             a {
                 font-weight: normal;
             }
@@ -70,8 +70,7 @@
 
 @media (min-width: $media-tablet) {
     .section-footer {
-
-        &__social {        
+        &__social {
             margin-left: $margin-main;
             flex-direction: row;
             max-width: 50vw;
@@ -82,23 +81,22 @@
         }
 
         .social-icons {
-           flex-direction: column;
+            flex-direction: column;
 
-           &__icon  {
-               margin-bottom: 0.3em;
-               
-           }
+            &__icon {
+                margin-bottom: 0.3em;
+            }
         }
     }
 }
 
-@media (min-width: $media-computer-small){
+@media (min-width: $media-computer-small) {
     .section-footer {
         display: flex;
         flex-direction: row;
 
         &__social {
-            width: 100%;  
+            width: 100%;
             margin-left: 0;
         }
     }

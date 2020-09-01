@@ -1,5 +1,4 @@
-@import 'base';
-
+@import "base";
 
 .section-landing {
     display: flex;
@@ -27,10 +26,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-        "title img"
-        "title img"
-        "button img";
+        grid-template-areas:
+            "title img"
+            "title img"
+            "button img";
     }
 
     &__title {
@@ -59,10 +58,7 @@
     }
 }
 
-
-   
-
-@media(min-width: $media-tablet) {
+@media (min-width: $media-tablet) {
     .section-landing {
         flex-direction: row;
         justify-content: space-between;
@@ -81,10 +77,10 @@
         &__container {
             padding-left: 1.3em;
             grid-template-rows: 0.4fr 1fr 0.4fr;
-            grid-template-areas: 
-            "title title"
-            "img img"
-            "button button";
+            grid-template-areas:
+                "title title"
+                "img img"
+                "button button";
             column-gap: 0.5em;
             row-gap: 0.5em;
             justify-content: center;
@@ -96,36 +92,32 @@
             text-align: center;
         }
 
-
         &__button {
             align-self: center;
         }
 
         &__img {
             max-width: 100%;
-             justify-self: center;
+            justify-self: center;
             margin: 0;
         }
     }
 }
 
-@media (min-width: $media-computer-small){
-
+@media (min-width: $media-computer-small) {
     .section-landing {
         &__text {
             margin-right: 3em;
         }
     }
-    
 
     .section-landing-aside {
-
-        &__container{
+        &__container {
             padding: 4em 1.3em 4em 1.3em;
-            grid-template-areas: 
-            "title img"
-            "para img"
-            "button img";
+            grid-template-areas:
+                "title img"
+                "para img"
+                "button img";
             column-gap: 1em;
         }
 
@@ -137,7 +129,6 @@
         &__title {
             text-align: start;
         }
-        
 
         &__img {
             align-self: center;
@@ -145,4 +136,3 @@
         }
     }
 }
-

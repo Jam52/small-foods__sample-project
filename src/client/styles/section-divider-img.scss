@@ -1,4 +1,4 @@
-@import 'base';
+@import "base";
 
 .section-divider-img {
     height: 18vmax;
@@ -6,22 +6,19 @@
     z-index: 9;
     display: flex;
     justify-content: flex-end;
- 
+
     &__img {
-       margin-right: $margin-main;
-       height: 30vmax;
-       width: 30vmax;
-       z-index: 9;
+        margin-right: $margin-main;
+        height: 30vmax;
+        width: 30vmax;
+        z-index: 9;
     }
- }
+}
 
-
- @media (min-width: $media-computer-small) {
-
+@media (min-width: $media-computer-small) {
     .section-divider-img {
-    
-       &__img {
-          transform: translateX(-10vmin);
-       }
+        &__img {
+            transform: translateX(-10vmin);
+        }
     }
 }

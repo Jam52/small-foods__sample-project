@@ -1,11 +1,10 @@
-@import 'base';
+@import "base";
 
 .section-community {
     background-color: $color-light-green;
     display: flex;
     flex-direction: column;
     padding-bottom: 3rem;
-
 }
 
 .form-subscribe {
@@ -19,7 +18,6 @@
         &__check {
             display: flex;
             padding-top: 1em;
-            
         }
 
         &__checkbox {
@@ -36,7 +34,8 @@
             display: block;
         }
 
-        &__para, &__title {
+        &__para,
+        &__title {
             padding-left: 1em;
             padding-top: 0;
         }
@@ -56,21 +55,17 @@
         flex-direction: row;
         min-height: 50vh;
 
-
         .form-subscribe {
             max-width: 700px;
             display: flex;
             align-items: flex-end;
-
 
             .form {
                 &__title {
                     padding-top: 3rem;
                     padding-left: 0;
                 }
-
             }
         }
-        
     }
 }

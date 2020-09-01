@@ -1,4 +1,4 @@
-@import 'base';
+@import "base";
 
 .section-articles {
     padding-top: 4rem;
@@ -8,7 +8,6 @@
     &__divider {
         margin-right: 60vw;
     }
-
 
     &__container {
         display: flex;
@@ -44,13 +43,10 @@
     &__button {
         margin: 0 1rem 1rem 1rem;
     }
-
 }
 
 @media (min-width: $media-tablet) {
-
     .section-articles {
-    
         &__container {
             flex-direction: row;
             margin: 3rem $margin-main 0 $margin-main;
@@ -60,5 +56,4 @@
     .article + .article {
         margin-left: 2rem;
     }
-
 }
