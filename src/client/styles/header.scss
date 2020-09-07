@@ -1,12 +1,12 @@
-@import "base";
+@import 'base';
 
 .header__main {
-    margin: $margin-equal;
-    padding-top: 20vmin;
-    margin-bottom: 5vmin;
-    height: 30vmin;
+  margin: $margin-equal;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+  height: 3rem;
 
-    img {
-        height: 100%;
-    }
+  img {
+    height: 100%;
+  }
 }

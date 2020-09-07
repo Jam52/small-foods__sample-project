@@ -1,57 +1,113 @@
-@import "base";
+@import 'base';
 
 .section-download {
-    background-color: $color-light-green;
-    padding: 2em 0;
+  background-color: $color-light-green;
+  padding: 2em 0;
+  display: flex;
+  flex-direction: column;
+
+  &__aside {
+    padding: 2em $margin-main;
+    text-align: center;
+  }
+
+  &__img {
+    width: 100%;
+  }
+}
+
+.form-subscribe {
+  padding-left: $margin-main;
+  padding-right: $margin-main;
+
+  .form {
     display: flex;
     flex-direction: column;
 
-    &__aside {
-        padding: 2em $margin-main;
-        text-align: center;
+    &__check {
+      display: flex;
+      padding-top: 1em;
     }
 
-    &__img {
-        width: 100%;
+    &__checkbox {
+      display: block;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      height: 30px;
+      width: 60px;
+      background-color: #fff;
     }
+
+    &__para {
+      display: block;
+    }
+
+    &__para,
+    &__title {
+      padding-left: 1em;
+      padding-top: 0;
+    }
+
+    &__input {
+      height: 2rem;
+    }
+
+    &__button {
+      max-width: 15rem;
+    }
+  }
 }
 
 #section-download-2 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 @media (min-width: $media-tablet) {
-    .section-download {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
+  .section-download {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
 
-        &__text {
-            height: 100%;
-            width: 60%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        &__aside {
-            width: 40%;
-            padding: 2em $margin-main 2em 2em;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    &__text {
+      height: 100%;
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
+
+    &__aside {
+      width: 40%;
+      padding: 2em $margin-main 2em 2em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .form-subscribe {
+    max-width: 700px;
+    display: flex;
+    align-items: flex-end;
+
+    .form {
+      &__title {
+        padding-top: 3rem;
+        padding-left: 0;
+      }
+    }
+  }
 }
 
 @media (min-width: $media-computer-small) {
-    .section-download {
-        &__text {
-            max-width: 100ch;
-        }
-
-        &__aside {
-            width: 35%;
-        }
+  .section-download {
+    &__text {
+      max-width: 100ch;
     }
+
+    &__aside {
+      width: 35%;
+    }
+  }
 }
