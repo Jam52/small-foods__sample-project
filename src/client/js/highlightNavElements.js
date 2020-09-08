@@ -1,36 +1,44 @@
+function highlightNavElement(navElements, section) {
+  navElements.forEach((element) => {
+    let elementName = element.textContent
+      .toLowerCase()
+      .trim()
+      .split(' ')
+      .join('-')
+      .replace('?', '');
+    element.classList.remove('highlight');
+    if (elementName == section.id) {
+      element.classList.add('highlight');
+    }
+  });
+}
 
+function sectionIsInView() {
+  console.log('[sectionIsInView]fired');
+  const sections = document.querySelectorAll('.section');
+  sections.forEach((section) => {
+    if (section.id.length > 0) {
+      const navElements = document.querySelectorAll('.nav__link');
+      if (isOnScreen(section)) {
+        highlightNavElement(navElements, section);
+      }
+    }
+  });
+}
 
-const sections = document.querySelectorAll('.section')
+let debouncerId;
+
 window.addEventListener('scroll', () => {
-    sections.forEach(section => {
-        if(section.id.length > 0){
-            if(isOnScreen(section)){
-                const navElements = document.querySelectorAll('.nav__links li');
-                highlightNavElement(navElements, section);
-            } else {
-
-            }
-        }
-    })
-})
+  clearTimeout(debouncerId);
+  debouncerId = setTimeout(() => sectionIsInView(), 100);
+});
 
 function isOnScreen(element) {
-    if (element.getBoundingClientRect().top < (window.innerHeight/2) 
-    && element.getBoundingClientRect().bottom > (window.innerHeight/2)) {
-        return true;
-    }
-    return false;
-};
-
-
-function highlightNavElement(navElements, section) {
-    navElements.forEach(element => {
-        let elementName = element.textContent.toLowerCase().split(' ').join('-').replace('?', '');
-        element.style.paddingBottom = '1rem';
-        element.style.borderBottom = 'none';
-        if(elementName == section.id){
-            element.style.borderBottom = '0.7rem solid #B4C339';
-            element.style.paddingBottom = '0.3rem';
-        }
-    })
+  if (
+    element.getBoundingClientRect().top < window.innerHeight / 2 &&
+    element.getBoundingClientRect().bottom > window.innerHeight / 2
+  ) {
+    return true;
+  }
+  return false;
 }
