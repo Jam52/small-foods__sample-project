@@ -65,6 +65,7 @@
 }
 
 .button {
+  box-sizing: border-box;
   padding: 1em;
   background-color: $color-light-green;
   color: $color-dark-green;
@@ -74,26 +75,18 @@
   cursor: pointer;
   text-align: center;
   font-family: $font-title;
+  font-weight: 700;
 
   &:hover,
   &:focus {
-    background-color: transparent;
-    border: 0.2em solid $color-light-green;
-    padding: 0.8em;
-    color: $color-light-green;
+    background-color: $color-light-grey;
+    color: $color-dark-green;
+    outline: 1px solid #124022;
   }
 
   &--dark {
     color: #fff;
     background-color: $color-dark-green;
-
-    &:hover,
-    &:focus {
-      background-color: transparent;
-      border: 0.2em solid $color-dark-green;
-      color: $color-dark-green;
-      padding: 0.8em;
-    }
   }
 
   &--grey {
