@@ -1,14 +1,24 @@
-@import 'base';
+@import '_base';
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
 
 .section-landing {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-top: 0;
-
-  // &__text {
-  //   max-width: 80ch;
-  // }
 
   &__title {
     padding-bottom: 0;
@@ -23,8 +33,11 @@
     width: 88.5vw;
     padding: 1.3em 1.3em 1.3em $margin-main;
     background-color: $color-light-green;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas:
       'title img'
@@ -33,6 +46,9 @@
   }
 
   &__title {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
     grid-area: title;
     padding: 1em 0 0 0;
     color: $color-dark-green;
@@ -48,19 +64,75 @@
   }
 
   &__img {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 2;
     grid-area: img;
-    // margin-left: 1em;
+    -ms-grid-column-align: end;
     justify-self: end;
   }
 
   &__button {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
     grid-area: button;
+  }
+
+  @media (min-width: $media-tablet) {
+    &__title {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 3;
+    }
+
+    &__img {
+      -ms-grid-row: 3;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 3;
+    }
+
+    &__button {
+      -ms-grid-row: 5;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 3;
+    }
+  }
+
+  @media (min-width: $media-computer-small) {
+    &__title {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 1;
+    }
+    &__para {
+      -ms-grid-row: 2;
+      -ms-grid-column: 1;
+    }
+    &__img {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 3;
+      -ms-grid-column: 3;
+      -ms-grid-column-span: 1;
+    }
+    &__button {
+      -ms-grid-row: 3;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 1;
+    }
   }
 }
 
 @media (min-width: $media-tablet) {
   .section-landing {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 
     &__text {
@@ -70,20 +142,30 @@
 
   .section-landing-aside {
     max-width: 25rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    // justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 
     &__container {
       padding-left: 1.3em;
+      -ms-grid-rows: auto 0.5em 1fr 0.5em auto;
       grid-template-rows: auto 1fr auto;
       grid-template-areas:
         'title title'
         'img img'
         'button button';
+      -webkit-column-gap: 0.5em;
+      -moz-column-gap: 0.5em;
       column-gap: 0.5em;
       row-gap: 0.5em;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
     }
 
@@ -93,11 +175,14 @@
     }
 
     &__button {
+      -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
     }
 
     &__img {
       max-width: 100%;
+      -ms-grid-column-align: center;
       justify-self: center;
       margin: 0;
     }
@@ -118,6 +203,8 @@
         'title img'
         'para img'
         'button img';
+      -webkit-column-gap: 1em;
+      -moz-column-gap: 1em;
       column-gap: 1em;
     }
 
@@ -131,6 +218,8 @@
     }
 
     &__img {
+      -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
       width: 100%;
     }

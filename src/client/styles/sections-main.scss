@@ -1,8 +1,20 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @import 'base';
 
 .section-main {
   margin-right: $margin-main;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   padding: 0;
 
@@ -38,6 +50,7 @@
 
 .section-main__aside {
   background-color: $color-dark-green;
+  -ms-flex-item-align: end;
   align-self: flex-end;
 
   &--light {
@@ -62,8 +75,15 @@
   background-color: $color-dark-green;
   padding: 3em 3em 3em $margin-main;
   margin-right: $margin-main;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 
   &--light {
@@ -81,9 +101,18 @@
   }
 
   &__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     text-align: center;
   }
@@ -99,6 +128,8 @@
 
 #section-2 {
   .section-main__text {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
   }
   .divider-bottom {
@@ -108,12 +139,22 @@
 
 @media (min-width: $media-tablet) {
   .section-main__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 
   .section-main-icons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
 
     &__container + .section-main-icons__container {
@@ -123,6 +164,9 @@
   }
 
   .section-main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
 
     &__text {
@@ -140,8 +184,12 @@
     &__img {
       height: 100%;
       max-width: 35%;
+      -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
       padding-left: 1em;
+      -webkit-transform: translateY(10vmin);
+      -ms-transform: translateY(10vmin);
       transform: translateY(10vmin);
     }
 
@@ -170,6 +218,8 @@
     &__img {
       height: 100%;
       max-width: 30%;
+      -webkit-transform: translateY(10vmin);
+      -ms-transform: translateY(10vmin);
       transform: translateY(10vmin);
       margin-left: 2em;
     }
