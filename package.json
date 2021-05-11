@@ -51,7 +51,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.4",
     "import-glob-loader": "^1.1.0",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "prettier": "^2.1.1",
     "resolve-url-loader": "^3.1.1",
